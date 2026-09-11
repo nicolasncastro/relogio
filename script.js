@@ -3,6 +3,7 @@
 const titulo = document.querySelector('h1');
 const section = document.querySelector('section')
 const containerRelogio = document.querySelector('.containerRelogio');
+const containerCronometro = document.querySelector('.containerCronometro');
 
 function horario () {
     
@@ -47,6 +48,8 @@ document.addEventListener('mouseup', (evento) => {
 
     if (distancia <= -200) {
         containerRelogio.style.transform = `translateX(-2000px)`
+        containerCronometro.classList.add('active');
+        containerRelogio.classList.remove('active');
     } else {
         containerRelogio.style.transform = `translateX(0)`;
     }
