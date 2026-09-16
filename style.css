@@ -28,6 +28,6 @@ h1 {
 .containerRelogio, .containerCronometro {
     color: #0f000f94;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: transform 1s ease;
+    transition: transform 0.3s ease;
 }
 
