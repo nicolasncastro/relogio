@@ -1,9 +1,10 @@
 // RELÓGIO
 
-const titulo = document.querySelector('h1');
+const titulo = document.querySelector('.relogio');
 const section = document.querySelector('section')
 const containerRelogio = document.querySelector('.containerRelogio');
 const containerCronometro = document.querySelector('.containerCronometro');
+const h1cronometro = document.querySelector('.cronometro')
 
 function horario () {
     
@@ -59,3 +60,12 @@ document.addEventListener('mouseup', (evento) => {
 })
 
 // CRONOMETRO
+
+let contador = 0
+
+function cronometro () {
+    contador++
+    h1cronometro.innerHTML = `<h1>${contador}</h1>`
+}
+
+setInterval(cronometro, 1000)
