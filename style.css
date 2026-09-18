@@ -23,11 +23,12 @@ h1 {
     background-color: #00000018;
     border-radius: 25px;
     box-shadow: 6px 6px 12px 3px #0000003b;
+    cursor: pointer;
 }
 
 .containerRelogio, .containerCronometro {
     color: #0f000f94;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: transform 1s ease;
+    transition: transform 0.3s ease;
 }
 

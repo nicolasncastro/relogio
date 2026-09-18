@@ -46,7 +46,7 @@ document.addEventListener('mouseup', (evento) => {
     const distancia = evento.clientX - posicaoInicial;
     console.log(distancia);
 
-    if (distancia <= -200) {
+    if (distancia <= -500) {
         containerRelogio.style.transform = `translateX(-2000px)`
         containerCronometro.classList.add('active');
         containerRelogio.classList.remove('active');
