@@ -1,7 +1,6 @@
 // RELÓGIO
 
 const titulo = document.querySelector('.relogio');
-const section = document.querySelector('section')
 const containerRelogio = document.querySelector('.containerRelogio');
 const containerCronometro = document.querySelector('.containerCronometro');
 const h1cronometro = document.querySelector('.cronometro')
@@ -29,7 +28,7 @@ setInterval(horario, 1000);
 let posicaoInicial;
 let arrastando = false;
 
-section.addEventListener('mousedown', (evento) => {
+containerRelogio.addEventListener('mousedown', (evento) => {
     posicaoInicial = evento.clientX;
     arrastando = true;
 }) 
@@ -61,11 +60,31 @@ document.addEventListener('mouseup', (evento) => {
 
 // CRONOMETRO
 
-let contador = 0
+let contador = 0;
+let minutosCronometro = 0;
+let horasCronometro = 0;
 
 function cronometro () {
-    contador++
-    h1cronometro.innerHTML = `<h1>${contador}</h1>`
+
+    if (contador === 3) {
+        contador = 0 - 1;
+        minutosCronometro++;
+    }
+
+    contador++;
+
+    if (minutosCronometro === 2) {
+            minutosCronometro = 0;
+            horasCronometro++;
+    }
+
+    const segundosCronometro = contador < 10 ? `0${contador}` : contador;
+    const minutosCronometroFormatados = minutosCronometro < 10 ? `0${minutosCronometro}` : minutosCronometro;
+    const horasCronometroFormatadas = horasCronometro < 10 ? `0${horasCronometro}` : horasCronometro;
+
+    h1cronometro.innerHTML = `<h1>${horasCronometroFormatadas}:${minutosCronometroFormatados}:${segundosCronometro}</h1>`
+
+    
 }
 
 setInterval(cronometro, 1000)
