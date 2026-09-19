@@ -12,6 +12,7 @@ section {
 
 h1 {
     font-size: 9.5vh;
+    user-select: none;
 }
 
 .active {
